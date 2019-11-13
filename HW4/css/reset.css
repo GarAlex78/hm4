@@ -92,16 +92,16 @@ textarea {
   outline: none;
 }
 /* убираем внутренние отступы для текстовых полей */
-input[type='text'],
-input[type='password'],
+input[type="text"],
+input[type="password"],
 textarea {
   padding: 0;
 }
 /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
-input[type='checkbox'] {
+input[type="checkbox"] {
   vertical-align: bottom;
 }
-input[type='radio'] {
+input[type="radio"] {
   vertical-align: text-bottom;
 }
 sub {
@@ -134,7 +134,7 @@ html {
   min-height: 100%; /* всегда показываем вертикальную полосу прокрутки  */
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000;
   text-align: left;
   font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
@@ -143,7 +143,7 @@ body {
 a,
 a:visited {
   /* порядок правил для ссылок имеет значение */
-  color: #000;
+  /* color: #000; */
   text-decoration: underline;
 }
 a:hover {
@@ -171,6 +171,6 @@ img {
 }
 .clearfix:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }

@@ -23,7 +23,8 @@ header {
 .list-link {
   text-decoration: none;
   font-family: 'Playfair Display', serif;
-  font-size: 14px;
+  font-weight: 200;
+    font-size: 14px;
   text-transform: uppercase;
   color: #626262;
 }
