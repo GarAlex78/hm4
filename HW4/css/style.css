@@ -1,51 +1,131 @@
 /* 
 font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif; */
+* {
+  box-sizing: border-box;
+}
 .clearfix::after {
-content: "";
-display: table;
-clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 .wrapper {
-    width: 1170px;
-    /* background: skyblue; */
-    margin: auto;
-    padding: 40px 15px 80px 15px;
-    box-sizing: border-box;
+  width: 1170px;
+
+  margin: auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
-.header_wrp{
-    /* font-size: 0; */
-    padding: 0 15px;
-   
+.header_wrp {
+  padding: 40px 15px 40px 15px;
+  margin-bottom: 40px;
 }
 .logo {
-    /* display: inline-block;
-    vertical-align: middle; */
-    float: left;
+  float: left;
 }
 .logo img {
-    width: 80px;
+  width: 80px;
 }
 .list {
-    /* width: 1030px; */
-    /* display: inline-block; */
-    /* vertical-align: middle;
-    text-align: right;
-    text-decoration: none; */
-    float: right;
+  float: right;
 }
 .list-item {
- display: inline-block;
-    /* margin-left: 30px; */
-   list-style-type: none;
+  margin-left: 30px;
+  list-style-type: none;
+  float: right;
 }
 .list-link {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .list-link:hover {
-    color: #1abc9c;
+  color: #1abc9c;
+}
+.product {
+  margin-bottom: 75px;
+}
+.section_title {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555252;
+}
+.decorative_line {
+  /* width: 164px; */
+  /* margin: 0 auto; */
+  text-align: center;
+  margin-bottom: 65px;
+}
+.decorative_line img {
+  width: 164px;
+}
+.card {
+  float: left;
+  background: #e8effc;
+  width: 255px;
+  height: 320px;
+  margin: 15px;
+}
+.product_img {
+  height: 280px;
+}
+
+.product_name {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+.name {
+  background: #323232;
+  width: 200px;
+  float: left;
+  height: 40px;
+  padding: 10px;
+}
+.price {
+  background: #8c8c8c;
+  width: 55px;
+  float: right;
+  height: 40px;
+  padding: 11px;
+}
+.card:hover .name {
+  background: #1abc9c;
+}
+.card:hover .price {
+  background: #7fd9c7;
+}
+
+.card_news {
+  float: left;
+  width: 350px;
+  height: 500px;
+  margin: 15px;
+  background: #e8effc;
+}
+.image_news {
+  height: 270px;
+}
+.title_news {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #555252;
+  line-height: 26px;
+}
+.discr_news {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  /* font-weight: 600; */
+  color: #555252;
+  line-height: 26px;
+  letter-spacing: -1px;
+  margin: 15px 0 10px;
 }
