@@ -137,14 +137,15 @@ body {
   font-family: "Roboto", sans-serif;
   color: #000;
   text-align: left;
-  font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+  /* font-size: 1em; */
+  /* используем безопасные шрифтовые CSS стеки */
   min-height: 100%;
 }
 a,
 a:visited {
   /* порядок правил для ссылок имеет значение */
   color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: #000;
@@ -153,7 +154,7 @@ a:hover {
 a:focus,
 a:active {
   color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 h1,
 h2,
