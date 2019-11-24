@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+}
+.header {
+  padding: 35px 15px;
+}
+.list {
+  list-style: none;
+  font-size: 0;
+  float: right;
+}
+.list_item {
+  display: inline-block;
+  font-size: 16px;
+  padding: 2px 0 0 40px;
+}
+.list_link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  color: #000;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+.list_link:visited {
+  color: #000;
+}
+.list_link:hover,
+.list_link:focus {
+  color: #1abc9c;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  width: 1140px;
+  margin: auto;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+}
+.logo img {
+  width: 80px;
+  margin-bottom: -4px;
+}
+.slider {
+  width: 100%;
+  position: relative;
+  background-image: url(/images/slayder.png);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.title_slider {
+  padding: 0 15px;
+  height: 100px;
+  position: relative;
+  top: 250px;
+}
+.title_slider_h3 {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 67px;
+}
+.title_slider_h4 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.slider_btn {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: #1abc9c;
+  opacity: 0.65;
+  border: none;
+  outline: none;
+  transition: opacity 0.4s ease;
+  top: 0;
+}
+.right-arrow::before,
+.left-arrow::before {
+  content: "";
+  --s: 28px;
+  --bd: 4px solid #fff;
+  width: var(--s);
+  height: var(--s);
+  border-left: var(--bd);
+  border-top: var(--bd);
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  transform: rotate(-45deg);
+}
+.right-arrow {
+  right: 15px;
+}
+.right-arrow::before {
+  left: 30%;
+  transform: rotate(135deg);
+}
+.slider_btn:hover,
+.slider_btn:focus {
+  background-color: #4ec6ab;
+  opacity: 1;
+  cursor: pointer;
+}
+.new_collection {
+  height: 676px;
+}
+.new_collection_border {
+  background-color: #e9f0fd;
+  width: 100%;
+  height: 535px;
+  padding-top: 70px;
+}
+.new_collection_title {
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #515151;
+  position: relative;
+  height: 100px;
+  margin-bottom: 82px;
+}
+.new_collection_title::after {
+  content: "";
+  width: 160px;
+  border: 4px solid #1abc9c;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card {
+  width: 255px;
+  height: 322px;
+  float: left;
+  margin: 0 15px;
+}
+.card_img_wrp {
+  height: 283px;
+  overflow: hidden;
+  position: relative;
+  background-color: white; /* зачем */
+}
+.card_name-price_wrp {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+.card_name {
+  background: #323232;
+  width: 200px;
+  float: left;
+  height: 40px;
+  padding: 10px;
+  transition: background-color 0.6s ease;
+}
+.card_price {
+  background: #8c8c8c;
+  width: 55px;
+  float: right;
+  height: 40px;
+  padding: 11px;
+  transition: background-color 0.6s ease;
+}
+.card_modal {
+  position: absolute;
+  width: 235px;
+  height: 263px;
+  background-color: black;
+  opacity: 0;
+  z-index: 10;
+  top: 10px;
+  left: 10px;
+  transition-duration: 0.6s;
+}
+.btn_icon_wrp {
+  width: 180px;
+  height: 120px;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  font-size: 0;
+  z-index: 20;
+  opacity: 0;
+}
+.btn_icon {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px;
+  overflow: hidden;
+  vertical-align: top;
+  border: 1px solid white;
+  transition-duration: 0.3s;
+}
+.btn_icon_add {
+  width: 170px;
+  background-color: #323232;
+}
+.btn_title_add {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 32px;
+  color: #fff;
+}
+.btn_img_add {
+  display: block;
+  float: left;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+.btn_icon:hover {
+  opacity: 1;
+  background-color: #1abc9c;
+}
+.card_link:hover .card_modal {
+  opacity: 0.5;
+}
+.card_link:hover .btn_icon_wrp {
+  opacity: 1;
+}
+.card_link:hover .card_name {
+  background-color: #1abc9c;
+}
+.card_link:hover .card_price {
+  background-color: #7fd9c7;
+}
+footer {
+  width: 100%;
+  height: 90px;
+  background-color: #323232;
+  text-align: center;
+  line-height: 90px;
+  color: #fff;
+}
+.footer_title_color {
+  color: #1abc9c;
+}
