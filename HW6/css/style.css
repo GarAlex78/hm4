@@ -158,9 +158,9 @@ body {
   right: 0;
   opacity: 0;
   background: linear-gradient(#ed8889, #eed787);
-  /* display: flex;
-    justify-content: center;
-    align-items: center;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .team-photo-wrp:hover .photo-gradient {
   bottom: 10px;
