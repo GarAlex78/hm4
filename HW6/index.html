@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="wrp">
-        <header class="header header__wrp">
-            <a href="" class="logo header__logo">
+    <div class="container">
+        <header class="header header__container">
+            <a href="" class="logo">
                 <!-- как поступать если стили ненужно применять -->
-                <img class="logo__img" src="./images/Без-имени-1.png" alt="" /></a>
+                <img class="logo__img" src="./images/Без-имени-1.png" alt="logo" /></a>
 
             <ul class="list header__list">
                 <li class="list__item"><a class="list__link" href="#">about</a></li>
@@ -29,7 +29,7 @@
         </header>
         <div class="content">
             <h4 class="content__title">We work with</h4>
-            <h3 class="content__subtitle">amazing services</h3>
+            <span class="content__subtitle">amazing services</span>
         </div>
         <div class="all-services">
             <div class="service all-services__service">
@@ -78,7 +78,7 @@
         </div>
         <div class="content">
             <h4 class="content__title">Who we are</h4>
-            <h3 class="content__subtitle">meet our team</h3>
+            <span class="content__subtitle">meet our team</span>
 
             <p class="content__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum
@@ -89,82 +89,91 @@
         </div>
         <div class="cards-team">
             <div class="card-team">
-                <div class="team-photo-wrp">
-                    <img class="team-photo" src="./images/Portret-1.jpg" alt="portret1" />
-                    <div class="photo-gradient"></div>
-                    <div class="links">
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                <div class="card-team__photo-wrp">
+                    <img class="card-team__photo" src="./images/Portret-1.jpg" alt="team-photo1" />
+                    <div class="card-team__gradient"></div>
+                    <div class="social-icons card-team__social-icons">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#facebook"></use>
                             </svg></a>
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#twitter"></use>
                             </svg>
                         </a>
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#pinterest"></use>
                             </svg>
                         </a>
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#instagram"></use>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <p class="team-name">
-                    matthew dix<span class="team-profession">Graphic Design</span>
+                <p class="card-team__name">
+                    matthew dix<span class="card-team__profession">Graphic Design</span>
                 </p>
             </div>
             <div class="card-team">
-                <div class="team-photo-wrp">
-                    <img class="team-photo" src="./images/Portret-2.jpg" alt="portret2" />
-                    <div class="photo-gradient"></div>
-                    <div class="links">
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                <div class="card-team__photo-wrp">
+                    <img class="card-team__photo" src="./images/Portret-2.jpg" alt="team-photo2" />
+                    <div class="card-team__gradient"></div>
+                    <div class="social-icons card-team__social-icons">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#facebook"></use>
                             </svg></a>
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#twitter"></use>
                             </svg>
                         </a>
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#pinterest"></use>
                             </svg>
                         </a>
-                        <a class="links-social" href="#">
-                            <svg class="link-svg">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
                                 <use xlink:href="./images/social svg/sprite.svg#instagram"></use>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <p class="team-name">
-                    christopher campbell<span class="team-profession">Branding/UX design</span>
+                <p class="card-team__name">
+                    christopher campbell<span class="card-team__profession">Branding/UX design</span>
                 </p>
             </div>
             <div class="card-team">
-                <div class="team-photo-wrp">
-                    <img class="team-photo" src="./images/Portret-3.jpg" alt="portret3" />
-                    <div class="photo-gradient"></div>
-                    <div class="links">
-                        <a class="links-social" href="#"><img src="./images/facebook.png" alt="facebook" />
+                <div class="card-team__photo-wrp">
+                    <img class="card-team__photo" src="./images/Portret-3.jpg" alt="team-photo3" />
+                    <div class="card-team__gradient"></div>
+                    <div class="social-icons card-team__social-icons">
+                        <a class="social-icons__links" href="#">
+                            <svg class="social-icons__svg">
+                                <use xlink:href="./images/social svg/sprite.svg#facebook"></use>
+                            </svg>
                         </a>
-                        <a class="links-social" href="#"><img src="./images/twitter.png" alt="twitter" />
+                        <a class="social-icons__links" href="#"><svg class="social-icons__svg">
+                                <use xlink:href="./images/social svg/sprite.svg#twitter"></use>
+                            </svg>
                         </a>
-                        <a class="links-social" href="#"><img src="./images/pinterest.png" alt="pinterest" />
+                        <a class="social-icons__links" href="#"><svg class="social-icons__svg">
+                                <use xlink:href="./images/social svg/sprite.svg#pinterest"></use>
+                            </svg>
                         </a>
-                        <a class="links-social" href="#"><img src="./images/instagram.png" alt="instagram" />
+                        <a class="social-icons__links" href="#"><svg class="social-icons__svg">
+                                <use xlink:href="./images/social svg/sprite.svg#instagram"></use>
+                            </svg>
                         </a>
                     </div>
                 </div>
-                <p class="team-name">
-                    michael fertig<span class="team-profession">Developer</span>
+                <p class="card-team__name">
+                    michael fertig<span class="card-team__profession">Developer</span>
                 </p>
             </div>
         </div>
