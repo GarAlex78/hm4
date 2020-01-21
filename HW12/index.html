@@ -37,16 +37,19 @@
                         <div class="card__colom">
                             <div class="card__foto">
 
-                                <img sizes="
-                                (max-width: 320px) 300px,
-                                (max-width: 499px) 480px,
-                                (max-width: 821px), 821px" srcset="
-./images/light-man_copy_scoxs1_c_scale,w_320.png 320w,
-./images/light-man_copy_scoxs1_c_scale,w_499.png 499w,
-./images/light-man_copy_scoxs1_c_scale,w_821.png 821w" src="./images/light-man_copy_scoxs1_c_scale,w_821.png" alt="">
+                                <img class="card__foto_img" srcset="                       
+                                ./images/light-man_copy_scoxs1_c_scale,w_348.png 348w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_348.png 458w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_492.png 492w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_573.png 573w" sizes="
+                                (max-width: 767px) 458px,
+                                (max-width: 992px) 348px,
+                                (max-width: 1200px) 492px,
+                                 1201px
+                                
+                                " src="./images/light-man_copy_scoxs1_c_scale,w_573.png" alt="">
 
-                                <!-- <img class="card__foto_img" src="./images/light-man_copy.png"
-                                    alt=""> -->
+                                <!-- <img class="card__foto_img" src="./images/light-man_copy.png" alt=""> -->
                             </div>
                             <div class="card__title">menedger</div>
                             <div class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
@@ -57,23 +60,20 @@
 
                         </div>
                         <div class="card__colom">
-                            <div class="card__foto"> <img sizes="
-                                (max-width: 320px) 320px,
-                                (max-width: 499px) 499px,
-                                (max-width: 821px), 821px" srcset="
-./images/light-man_copy_scoxs1_c_scale,w_320.png 320w,
-./images/light-man_copy_scoxs1_c_scale,w_499.png 499w,
-./images/light-man_copy_scoxs1_c_scale,w_821.png 821w" src="./images/light-man_copy_scoxs1_c_scale,w_821.png" alt="">
+                            <div class="card__foto">
+                                <!-- Подключение Responsive images Сначала вставляю обычную картинку в html, делаю ей max-width 100% прописываем брэкпоинты. Смотрю реальные розмеры картинки в браузере (средсва разработчика) при брэкпоинтах, потом сжимаю картинку до этих размеров и делаю запись как ниже. (max-width: 767px) - это точно такой же брэкпоинт как и прописан в css, а 348px размер места выделяемого под картинки, И ИМЕННО ЭТИМ ПАРАМЕТРОМ МЫ ВЫБИРАЕМ КАРТИНКУ КОТОРАЯ БУДЕТ ЗАГРУЖАТЬСЯ ПРИ ТОМ ИЛИ ИНОМ БРЭКПОИНТЕ. Проще говоря если у нас есть картинка с шириной 348px (348w) то именно она загрузится-->
+                                <img class="card__foto_img" srcset="
+                                ./images/light-man_copy_scoxs1_c_scale,w_348.png 348w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_492.png 492w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_573.png 573w" sizes="
+                                (max-width: 767px) 348px,
+                                (max-width: 992px) 348px,
+                                (max-width: 1200px) 492px,
+                                 1201px
+                                
+                                " src="./images/light-man_copy_scoxs1_c_scale,w_573.png" alt="">
+                                <!--  При просмотре в браузере нужно внимательно смотреть какой размер блока под картинку и какая загружается картинка во вклатке "сеть"  -->
                             </div>
-                            <div class="card__title">menedger</div>
-                            <div class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                                delectus, modi beatae eaque quos omnis facere ipsam atque minus nulla rerum rem
-                                blanditiis officia natus quod aut reiciendis perferendis voluptatum.
-                            </div>
-                        </div>
-                        <!-- <div class="card__colom">
-                            <div class="card__foto"><img class="card__foto_img" src="./images/light-man_copy.png"
-                                    alt=""></div>
                             <div class="card__title">menedger</div>
                             <div class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
                                 delectus, modi beatae eaque quos omnis facere ipsam atque minus nulla rerum rem
@@ -81,14 +81,44 @@
                             </div>
                         </div>
                         <div class="card__colom">
-                            <div class="card__foto"><img class="card__foto_img" src="./images/light-man_copy.png"
-                                    alt=""></div>
+                            <div class="card__foto">
+                                <img class="card__foto_img" srcset="
+                                ./images/light-man_copy_scoxs1_c_scale,w_348.png 348w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_492.png 492w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_573.png 573w" sizes="
+                                (max-width: 767px) 348px,
+                                (max-width: 992px) 348px,
+                                (max-width: 1200px) 492px,
+                                 1201px
+                                
+                                " src="./images/light-man_copy_scoxs1_c_scale,w_573.png" alt="">
+
+                            </div>
                             <div class="card__title">menedger</div>
                             <div class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
                                 delectus, modi beatae eaque quos omnis facere ipsam atque minus nulla rerum rem
                                 blanditiis officia natus quod aut reiciendis perferendis voluptatum.
                             </div>
-                        </div> -->
+                        </div>
+                        <div class="card__colom">
+                            <div class="card__foto">
+                                <img class="card__foto_img" srcset="
+                                ./images/light-man_copy_scoxs1_c_scale,w_348.png 348w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_492.png 492w,
+                                ./images/light-man_copy_scoxs1_c_scale,w_573.png 573w" sizes="
+                                (max-width: 767px) 348px,
+                                (max-width: 992px) 348px,
+                                (max-width: 1200px) 492px,
+                                 1201px
+                                
+                                " src="./images/light-man_copy_scoxs1_c_scale,w_573.png" alt="">
+                            </div>
+                            <div class="card__title">menedger</div>
+                            <div class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                                delectus, modi beatae eaque quos omnis facere ipsam atque minus nulla rerum rem
+                                blanditiis officia natus quod aut reiciendis perferendis voluptatum.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
