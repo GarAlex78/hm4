@@ -3,20 +3,39 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  /* height: 100%; */
+  /*   для того чтобы футер прибить к низу задаем (body height: 100%;) а обертке (wrp) задаем (min-height: 100%)-розтягиваем на всю высоту задаем блоку(display: flex) и (flex-direction:column) - переварачиваем флекс. А контентному блоку (main) задаем свойство (flex 1 1 auto) - даем возможность блоку увеличется на всю высоту body.  
+  */
 }
 
 .wrp {
+  /*  */
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
 .header {
-  background-color: #83552d;
+  /* когда мы задаем блоку(position: fixed или absolut, блок всплывает над потоком и чтобы его вернуть на место(в свой блок обертку)  обезательно задаем иенно (width: 100%) а не (max-width) ну и позиционирование (top, left,.... )  */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
-.body {
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #83552d;
+  padding: 10px 0;
+  z-index: 4;
+}
+.content {
   background: #068a9c;
   flex: 1 1 auto;
+  padding-top: 110px;
 }
 .footer {
   background: #770f10;
@@ -51,7 +70,9 @@ body {
   border: 2px solid #d44a1e;
 } */
 .header__wrp {
-  padding: 10px 0;
+  /* max-width: 100%; */
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,24 +82,38 @@ body {
 }
 .header__logo {
   border: 2px solid #770f10;
+  /* контейнеру (header__wrp) задаем display: flex а контейнеру с картинкой запрещяем увеличеватся, даем базовый размер 120рх, обрезаем не нужное (overflow: hidden) и по желанию скругляем (border-radius: 50%) */
+  flex: 0 0 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 25px;
+  z-index: 6;
 }
 .logo__img {
+  /* самой картинке даем(display: block) что бы убрать не нужние отступы, иногда помогает и (font-size: 0;) чтобы убрать отступ с низу у картинки. Даем (max-width: 100%;)  чтобы картинка не выходила за приделы блока (header__logo) */
   display: block;
-  width: 150px;
-  /* border: 2px solid #770f10; */
-  /* font-size: 0; */
+  max-width: 100%;
+}
+
+.header__menu {
 }
 .menu {
+  /* list-style: none; убираем маркеры перед списком, в данном случаи находится в normolize */
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  right: 10px;
 }
 .menu__item {
-  border: 2px solid #770f10;
   margin-left: 15px;
 }
 .menu__link {
   text-align: center;
   height: 25px;
+  /* сылки делаем блочными чтобы задавать им размеры */
   display: block;
   font-size: 1.15rem;
   line-height: 25px;
@@ -86,7 +121,9 @@ body {
   font-weight: 700;
   padding: 0 10px;
   text-transform: uppercase;
-  background: #cab7ab;
+}
+.body {
+  margin-top: 110px;
 }
 /* Медиа запросы должны стаять после правил которые они меняют, иначе они не сработают */
 @media (max-width: 992px) {
@@ -118,8 +155,93 @@ body {
     padding: 10px;
     flex: 1 1 100%;
   }
+  .menu {
+    display: block;
+    margin-top: 80px;
+  }
+  .header__menu {
+    position: fixed;
+    background-color: rgb(33%, 38%, 4%, 0.8);
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* если пункты меню не влазят на эктран мы добавляем нашему блоку с меню (overflow: auto;) для скрола */
+    overflow: auto;
+    transition: all 0.3s ease 0s;
+  }
+  .header__menu.active {
+    top: 0;
+  }
+
+  .header__burger {
+    /* cursor: pointer; */
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 8;
+    right: 10px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger.active span {
+    /* уменьшает нашу полоску до нуля */
+    transform: scale(0);
+
+    /* мы не применяем display: none; потому что к нему нельзя применить свойство transition: all 0.3s ease 0s;*/
+  }
+
+  .header__burger.active:before {
+    /* при активной кнопке полоски нашего бургера переварачиваются и немного их здвигаем в низ */
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .burger__body {
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  body.lock {
+    overflow: hidden;
+  }
+  .menu__item {
+    margin-bottom: 25px;
+  }
+  .menu__link {
+    padding: 10px;
+    font-size: 25px;
+    color: black;
+  }
 }
-/* чтобы выравнять, выставить по центру и розтянуть картинку, делаем ее блочной, maxi-width 100% заменяем на width 100%, и проставлякм margin 0 auto. */
+
+/* чтобы  выставить по центру и розтянуть картинку, делаем ее блочной, maxi-width 100% заменяем на width 100%, и проставляeм margin 0 auto. */
 .card__foto_img {
   display: block;
   width: 100%;
